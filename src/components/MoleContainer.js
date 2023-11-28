@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import Mole from './Mole';
-import EmptySlot from './EmptySlot';
+import EmptySlot from './EmptySlot'; // Import EmptySlot
 
 function MoleContainer({ score, setScore }) {
     const [displayMole, setDisplayMole] = useState(false);
@@ -18,7 +17,7 @@ function MoleContainer({ score, setScore }) {
             handleClick={handleMoleClick}
         />
     ) : (
-        <EmptySlot />
+        <EmptySlot setDisplayMole={setDisplayMole} />
     );
 
     return <div className="mole-container">{moleOrEmptySlot}</div>;

@@ -1,4 +1,3 @@
-// App.js
 import './App.css';
 import { useState } from 'react'
 import MoleContainer from './components/MoleContainer'
