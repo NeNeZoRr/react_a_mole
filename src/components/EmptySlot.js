@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import MoleHill from '../molehill.png';
 
-const EmptySlot = ({ setDisplayMole }) => {
+const EmptySlot = (props) => {
     useEffect(() => {
-        const randSeconds = Math.ceil(Math.random() * 5000);
         const timer = setTimeout(() => {
-            setDisplayMole(false);
-        }, randSeconds);
+            props.toggle(true);
+        }, Math.ceil(Math.random() * 5000));
 
         return () => clearTimeout(timer);
-    }, [setDisplayMole]); 
+    }, [props]);
 
     return (
-        <div className="empty-slot">
-            <img src={MoleHill} alt="Empty Mole Hill" />
+        <div>
+            <img style={{ width: '30vw' }} src={MoleHill} alt="MoleHill" />
         </div>
     );
 };
