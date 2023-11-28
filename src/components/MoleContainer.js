@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Mole from './Mole';
-import EmptySlot from './EmptySlot'; // Import EmptySlot
+import EmptySlot from './EmptySlot';
 
 function MoleContainer({ score, setScore }) {
     const [displayMole, setDisplayMole] = useState(false);
