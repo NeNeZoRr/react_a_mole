@@ -1,6 +1,6 @@
-import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import MoleContainer from './components/MoleContainer';
+import './App.css';
 
 const App = () => {
   const [score, setScore] = useState(0);
@@ -13,10 +13,17 @@ const App = () => {
     </div>
   );
 
+  const handleResetScore = () => {
+    setScore(0);
+  };
+
   return (
     <div className="App">
       <h1>React-A-Mole!</h1>
-      {score}
+      <div>
+        <p>Score: {score}</p>
+        <button onClick={handleResetScore}>Reset Score</button>
+      </div>
       {createMoleHill()}
     </div>
   );
